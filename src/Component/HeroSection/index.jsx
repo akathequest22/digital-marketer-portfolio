@@ -19,13 +19,13 @@ const HeroSection = () => {
           level={1}
           title="Full Stack Digital Marketer"
           btnText={"Grow Your Buissness Now"}
-          btnClassName=" w-[400] text-[30px] px-10 rounded-none parallelogram"
+          btnClassName=" w-[400] sm:text-[30px] sm:px-10 text-[22px] rounded-none parallelogram"
         >
         </HeadingDesc>
         </div>
         
         <Image
-          className=" mx-auto self-center lg:justify-start max-w-[600px] min-w-[400px]"
+          className=" mx-auto self-center lg:justify-start max-w-[600px] min-w-[300px]"
           alt=""
           src={heroImg}
           />
