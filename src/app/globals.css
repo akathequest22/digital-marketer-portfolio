@@ -1,33 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*,
+body{
+font-family: sans-serif;
+}
+html{
+  font-family: sans-serif;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+/* HTML: <div class="arc"></div> */
+.bg-lay {
+  --b: 40px; /* the boder thickness */
+  --a: 240deg; /* control the progression */
+  width: 300px;
+  aspect-ratio: 1;
+  padding: var(--b);
+  border-radius: 50%;
+  background: rgba(143,214,148,0.2);
+  --_g:/var(--b) var(--b) no-repeat
+    radial-gradient(50% 50%,#000 97%,#0000);
+  mask: top var(--_g),
+    calc(50% + 50%*sin(var(--a))) 
+    calc(50% - 50%*cos(var(--a))) var(--_g),
+    linear-gradient(#0000 0 0) content-box intersect,
+    conic-gradient(#000 var(--a),#0000 0);
+    z-index: -3333;
+    mask: top var(--_g),
+    calc(50% + 50% * sin(var(--a))) calc(50% - 50% * cos(var(--a))) var(--_g),
+    linear-gradient(#0000 0 0) content-box intersect,
+    conic-gradient(#000 var(--a), #0000 0);
+  z-index: -3333;
+  animation: rotateAndMove 18s linear infinite;
+}
+@keyframes rotateAndMove {
+  0% {
+    transform: rotate(0deg) translateX(0) translateY(0) translateZ(0);
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  25% {
+    transform: rotate(90deg) translateX(100px) translateY(0) translateZ(100px);
+  }
+  50% {
+    transform: rotate(180deg) translateX(0) translateY(100px) translateZ(100px);
+  }
+  75% {
+    transform: rotate(270deg) translateX(-100px) translateY(0) translateZ(100px);
+  }
+  100% {
+    transform: rotate(360deg) translateX(0) translateY(-100px) translateZ(0);
   }
 }
