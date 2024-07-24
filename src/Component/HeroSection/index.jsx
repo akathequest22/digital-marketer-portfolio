@@ -6,7 +6,7 @@ import Container from "../Container";
 const HeroSection = () => {
   return (
     <Container>
-      <div className=" mx-auto mt-28 relative grid items-center grid-cols-1 gap-8 lg:grid-cols-[1fr_503px]">
+      <div className=" bg-slate-500 justify-center sm:justify-between mx-auto mt-28 relative grid items-center grid-cols-1 gap-8 lg:grid-cols-[1fr_503px]">
         <div>
         <div className="bg-lay absolute right-[40%] top-30"></div>
         <HeadingDesc
@@ -25,7 +25,7 @@ const HeroSection = () => {
         </div>
         
         <Image
-          className=" mx-auto self-center lg:justify-start max-w-[600px] min-w-[300px]"
+          className=" mx-auto self-center lg:justify-start"
           alt=""
           src={heroImg}
           />
