@@ -18,16 +18,18 @@ const HeadingDesc = ({
   containerClassName,
   containerStyle,
   btnClassName,
-  btnStlyle
+  btnStlyle,
+  headingClassname,
+  
 }) => {
   return (
     <div className={containerClassName} style={containerStyle}>
       {isHeading1 ? (
-        <h1 className="xlg:leading-[84px] mb-3 font-ibmPlexSansCondensed text-[40px] font-bold leading-[50px] text-[#062d3e] xs:text-[48px] xs:leading-[56px] sm:text-[52px] sm:leading-[62px] md:text-[56px] md:leading-[68px] lg:text-[60px] lg:leading-[74px]  xl:text-[64px]">
+        <h1 className={`xlg:leading-[84px] mb-3 font-ibmPlexSansCondensed text-[40px] font-bold leading-[50px] text-[#062d3e] xs:text-[48px] xs:leading-[56px] sm:text-[52px] sm:leading-[62px] md:text-[56px] md:leading-[68px] lg:text-[60px] lg:leading-[74px]  xl:text-[64px] ${headingClassname}`}>
           {title}
         </h1>
       ) : (
-        <h3 className="xlg:leading-[84px] mb-3 font-ibmPlexSansCondensed text-[40px] font-bold leading-[50px] text-[#062d3e]  xs:text-[48px] xs:leading-[56px] sm:text-[52px] sm:leading-[62px] md:text-[56px] md:leading-[68px] lg:text-[60px] lg:leading-[74px]  xl:text-[64px]">
+        <h3 className={`xlg:leading-[84px] mb-3 font-ibmPlexSansCondensed text-[40px] font-bold leading-[50px] text-[#062d3e]  xs:text-[48px] xs:leading-[56px] sm:text-[52px] sm:leading-[62px] md:text-[56px] md:leading-[68px] lg:text-[60px] lg:leading-[74px]  xl:text-[64px] ${headingClassname}`}>
           {title}
         </h3>
       )}
