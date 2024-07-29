@@ -102,10 +102,11 @@ const WorkShowcase = () => {
 
   return (
 
-    //   <section className='curve-section'>
   <>
+  <div className='w-ful bg-slate-100 '> 
+
         <Container>
-<div className="work-showcase py-12 px-4">
+<div className="work-showcase py-12 px-4 ">
 <div className="flex items-center gap-12 mb-8">
           <h2 className="text-4xl font-bold text-[#062d3e]">
            My Work
@@ -114,10 +115,10 @@ const WorkShowcase = () => {
         </div>
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     {workItems.map((item, index) => (
-      <div
+      <div 
         ref={(el) => (workRef.current[index] = el)}
         key={index}
-        className="work-item bg-white p-6 rounded-lg shadow-lg cursor-pointer"
+        className="work-item bg-white p-6 rounded-lg shadow-lg cursor-pointer "
         onClick={() => showPopup(item)}
       >
         <Image src={item.image} alt={item.title} className="w-full h-48 object-cover rounded-lg mb-4" />
@@ -159,8 +160,8 @@ const WorkShowcase = () => {
   )}
 </div>
 </Container>
+  </div>
             </>
-//   </section>
   
   );
 };
