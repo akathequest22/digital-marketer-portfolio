@@ -67,7 +67,7 @@ gsap.from(".btn-ani  ",{
     <div className="curve-section">
 
     <Container >
-      <div className="  justify-center sm:justify-between mx-auto mt-28 relative grid items-center grid-cols-1 gap-8 lg:grid-cols-[1fr_503px]">
+      <div className="  justify-center sm:justify-between mx-auto mt-20 relative grid items-center grid-cols-1 gap-8 lg:grid-cols-[1fr_503px]">
         <div>
         <div className="bg-lay absolute right-[40%] top-30"></div>
         <HeadingDesc
