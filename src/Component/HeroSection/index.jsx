@@ -10,9 +10,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const HeroSection = () => {
-const tl=gsap.timeline()
-
+  
   const heroSecAnimation =useGSAP(()=>{
+    const tl=gsap.timeline()
     const heading=document.querySelector(".heading");
     const splitedText =heading.textContent.split("")
     const halfValue=splitedText.length/2
@@ -64,7 +64,9 @@ gsap.from(".btn-ani  ",{
     heroSecAnimation
   })
   return (
-    <Container>
+    <div className="curve-section">
+
+    <Container >
       <div className="  justify-center sm:justify-between mx-auto mt-28 relative grid items-center grid-cols-1 gap-8 lg:grid-cols-[1fr_503px]">
         <div>
         <div className="bg-lay absolute right-[40%] top-30"></div>
@@ -80,8 +82,8 @@ gsap.from(".btn-ani  ",{
           btnText={"Grow Your Buissness Now"}
           headingClassname="heading"
           descriptionClassName="description"
-          btnClassName=" w-[400] sm:text-[30px] sm:px-10 text-[22px] rounded-none parallelogram btn-ani"
-        >
+          btnClassName="  btn-ani"
+          >
         </HeadingDesc>
         </div>
         
@@ -92,6 +94,7 @@ gsap.from(".btn-ani  ",{
           />
           </div>
     </Container>
+          </div>
   );
 };
 
