@@ -1,6 +1,6 @@
-import Container from '../Container';
-import Button from '../Elements/Buton';
-import ServiceCard from './ServiceCard';
+import Container from "../Container";
+import Button from "../Elements/Buton";
+import ServiceCard from "./ServiceCard";
 
 const services = [
   {
@@ -52,26 +52,21 @@ const services = [
 ];
 
 const Services = () => {
-
   return (
     <Container>
       <div className="ourservices py-12" id="service">
-        <div className="flex items-center gap-12 mb-8">
-          <h2 className="text-4xl font-bold text-[#062d3e]">
+        <div className="flex  text-center justify-center items-center gap-12 mb-8">
+          <h2 className="text-4xl text-center font-bold text-[#062d3e]">
             Services We Provide
           </h2>
           <div className="loader"></div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ourservices-cards">
-        {services.map((props, i) => (
-          <ServiceCard key={i} {...props}  initialColorIndex={i % 5} />
-        ))}
+          {services.map((props, i) => (
+            <ServiceCard key={i} {...props} initialColorIndex={i % 5} />
+          ))}
         </div>
-        <Button 
-          className="mt-8" bnText={" Let’s Collaborate!"} isPri={true} 
-        />
-         
-
+        <Button className="mt-8" bnText={" Let’s Collaborate!"} isPri={true} />
       </div>
     </Container>
   );
