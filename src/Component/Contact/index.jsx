@@ -1,5 +1,9 @@
 "use client";
 
+import Image from "next/image";
+import joinUS from "../../../public/my-img/joinus.jpg";
+import Form from "../Form";
+
 // import Map from "../Map";
 
 const ContactUsPage = () => {
@@ -18,69 +22,12 @@ const ContactUsPage = () => {
             <h3 className="text-2xl font-semibold mb-4 text-black">
               Contact Form
             </h3>
-            <form
-              className="space-y-6 max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md"
-              action="/submit"
-              method="post"
-            >
-              <div className="flex flex-col items-start">
-                <label
-                  htmlFor="name"
-                  className="text-gray-700 text-lg font-semibold mb-2"
-                >
-                  Name
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  className="w-full p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#8fd694] transition duration-300"
-                  required
-                />
-              </div>
-              <div className="flex flex-col items-start">
-                <label
-                  htmlFor="email"
-                  className="text-gray-700 text-lg font-semibold mb-2"
-                >
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  className="w-full p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#8fd694] transition duration-300"
-                  required
-                />
-              </div>
-              <div className="flex flex-col items-start">
-                <label
-                  htmlFor="message"
-                  className="text-gray-700 text-lg font-semibold mb-2"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={6}
-                  className="w-full p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#8fd694] transition duration-300"
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-[#8fd694] text-white py-3 px-6 rounded-md hover:bg-[#8fd694] transition duration-300"
-              >
-                Send Message
-              </button>
-            </form>
+            <Form />
           </div>
           <div className="w-full md:w-1/2">
             <h3 className="text-2xl font-semibold mb-4 text-[#062d3e]">
               Our Location
             </h3>
-            {/* <Map /> */}
             <div className="mt-8 text-black">
               <p className="text-lg font-semibold">Our Address</p>
               <p>123 Business Rd, Suite 100</p>
@@ -88,6 +35,7 @@ const ContactUsPage = () => {
               <p>Phone: (123) 456-7890</p>
               <p>Email: contact@yourdomain.com</p>
             </div>
+            <Image src={joinUS} alt="" />
           </div>
         </div>
       </section>

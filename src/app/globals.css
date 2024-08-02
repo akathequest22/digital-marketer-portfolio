@@ -113,3 +113,7 @@ html{
   border-bottom-right-radius: 25px 50px;
 }
 /* ///////////////////// */
+.scroll-behavior{
+  scroll-behavior: smooth;
+  
+}

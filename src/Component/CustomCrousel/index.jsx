@@ -1,8 +1,5 @@
 "use client";
-import React, {  useRef } from "react";
-import Image from "next/image";
-import LinkButton from "../Elements/LinkButton";
-
+import React, { useRef } from "react";
 
 const CustomCarousel = ({
   children,
@@ -12,17 +9,14 @@ const CustomCarousel = ({
   crouselCardContainerClassName,
   crouselArrowsClassName,
   crouselArrowsStyles,
-  isShowViewAllBtn,
-  viewAllBtnHref,
   isArrowOnBottom = true,
   isArrowOnTop = false,
 }) => {
-  const divRef = useRef<HTMLDivElement>(null);
+  const divRef = useRef(null); // Initialize with null
   const handlePrev = () => {
     if (divRef.current) {
       const width = divRef.current.offsetWidth;
-      divRef.current.scrollLeft =
-        divRef.current.scrollLeft - (width > 600 ? 360 : 300);
+      divRef.current.scrollLeft = divRef.current.scrollLeft - 300;
       console.log(width, "width");
     }
   };
@@ -36,35 +30,24 @@ const CustomCarousel = ({
   };
   return (
     <div
-      className={` relative overflow-hidden  ${crouselWrapperClassName}`}
+      className={`relative overflow-hidden  ${crouselWrapperClassName}`}
       style={crouselWrapperStyles}
     >
       {isArrowOnTop && (
         <div
-          className={` mb-8 flex justify-end gap-6 ${crouselArrowsClassName}`}
+          className={`mb-8 flex justify-end gap-6 ${crouselArrowsClassName}`}
           style={crouselArrowsStyles}
         >
-          {isShowViewAllBtn && (
-            <LinkButton variant="TER" href={viewAllBtnHref || ""} size="large">
-              View All Plans
-            </LinkButton>
-          )}
-          <Image
-            src={leftArrow}
-            alt=""
-            onClick={handlePrev}
-            className=" transform cursor-pointer transition-transform duration-200 hover:translate-x-0.5"
-          />
-          <Image
-            src={rightArrow}
-            alt=""
-            onClick={handleNext}
-            className=" transform cursor-pointer transition-transform duration-200 hover:translate-x-0.5"
-          />
+          <div className="cursor-pointer text-[#000]" onClick={handlePrev}>
+            <span>Previous</span> &#9654;
+          </div>
+          <div className="cursor-pointer" onClick={handleNext}>
+            <span>Next</span> &#9664;
+          </div>
         </div>
       )}
       <div
-        className={`scroll-behavior  relative flex gap-8 overflow-x-hidden ${crouselCardContainerClassName}`}
+        className={`scroll-behavior relative flex gap-8 overflow-x-hidden ${crouselCardContainerClassName}`}
         ref={divRef}
         style={crouselCardContainerStyles}
       >
@@ -72,18 +55,12 @@ const CustomCarousel = ({
       </div>
       {isArrowOnBottom && (
         <div className="mt-8 flex justify-end gap-6">
-          <Image
-            src={leftArrow}
-            alt=""
-            onClick={handlePrev}
-            className=" transform cursor-pointer transition-transform duration-200 hover:translate-x-0.5"
-          />
-          <Image
-            src={rightArrow}
-            alt=""
-            onClick={handleNext}
-            className=" transform cursor-pointer transition-transform duration-200 hover:translate-x-0.5"
-          />
+          <div className="cursor-pointer text-[#000]" onClick={handlePrev}>
+            <span>Previous</span> &#9654;
+          </div>
+          <div className="cursor-pointer" onClick={handleNext}>
+            <span>Next</span> &#9664;
+          </div>
         </div>
       )}
     </div>
