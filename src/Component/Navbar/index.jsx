@@ -1,8 +1,9 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import logo from "../../../public/my-img/log1.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,7 +49,10 @@ const Navbar = () => {
       <div className="flex items-center justify-between h-16 mx-auto w-[87%]  ">
         <div className="flex items-center justify-between  w-full">
           <div className="flex-shrink-0">
-            <div>Noman Gulistan</div>
+            <div className="flex gap-2  items-center">
+              <Image src={logo} alt="" width={80} height={80} />
+              <p className="font-bold text-[20px]"> Noman Gulistan</p>
+            </div>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">

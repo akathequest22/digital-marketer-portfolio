@@ -2,10 +2,6 @@
 
 import Button from "../Elements/Buton";
 
-
-
-
-
 const HeadingDesc = ({
   // level = 2,
   isHeading1 = false,
@@ -20,16 +16,19 @@ const HeadingDesc = ({
   btnClassName,
   btnStlyle,
   headingClassname,
-  
 }) => {
   return (
     <div className={containerClassName} style={containerStyle}>
       {isHeading1 ? (
-        <h1 className={`xlg:leading-[84px] mb-3 font-ibmPlexSansCondensed text-[40px] font-bold leading-[50px] text-[#062d3e] xs:text-[48px] xs:leading-[56px] sm:text-[52px] sm:leading-[62px] md:text-[56px] md:leading-[68px] lg:text-[60px] lg:leading-[74px]  xl:text-[64px] ${headingClassname}`}>
+        <h1
+          className={`xlg:leading-[84px] mb-3 font-ibmPlexSansCondensed text-[40px] font-bold leading-[50px] text-[#062d3e] xs:text-[48px] xs:leading-[56px] sm:text-[52px] sm:leading-[62px] md:text-[56px] md:leading-[68px] lg:text-[60px] lg:leading-[74px]  xl:text-[64px] ${headingClassname}`}
+        >
           {title}
         </h1>
       ) : (
-        <h3 className={`xlg:leading-[84px] mb-3 font-ibmPlexSansCondensed text-[40px] font-bold leading-[50px] text-[#062d3e]  xs:text-[48px] xs:leading-[56px] sm:text-[52px] sm:leading-[62px] md:text-[56px] md:leading-[68px] lg:text-[60px] lg:leading-[74px]  xl:text-[64px] ${headingClassname}`}>
+        <h3
+          className={`xlg:leading-[84px] mb-3 font-ibmPlexSansCondensed text-[40px] font-bold leading-[50px] text-[#062d3e]  xs:text-[48px] xs:leading-[56px] sm:text-[52px] sm:leading-[62px] md:text-[56px] md:leading-[68px] lg:text-[60px] lg:leading-[74px]  xl:text-[64px] ${headingClassname}`}
+        >
           {title}
         </h3>
       )}
@@ -41,12 +40,15 @@ const HeadingDesc = ({
       )}
       <div className=" flext mt-8 justify-center lg:justify-start">
         {isButton && (
-          <Button isPri className={btnClassName} style={btnStlyle} bnText={btnText}>
+          <Button
+            className={`${btnClassName}`}
+            style={btnStlyle}
+            bnText={btnText}
+          >
             {btnText}
           </Button>
         )}
       </div>
-     
     </div>
   );
 };

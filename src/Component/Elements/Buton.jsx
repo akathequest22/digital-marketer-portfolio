@@ -1,10 +1,28 @@
-
-const Button = ({isPri,bnText,className,style}) => {
+"use client";
+import "./btn.style.css";
+const Button = ({ bnText, className, isRedirectToWhatsap = true }) => {
   return (
-    <button className={`md:py-4 md:px-6 px-4 py-2 text-[#062d3e] rounded-md ${isPri ?"bg-[#8fd694]":" "} ${className} `} style={style} >{bnText}</button>
+    <a href="https://wa.me/923369497644" target="_blank">
+      <button class={`animated-button ${className}`}>
+        <svg
+          viewBox="0 0 24 24"
+          class="arr-2"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+        </svg>
+        <span class="text">{bnText}</span>
+        <span class="circle"></span>
+        <svg
+          viewBox="0 0 24 24"
+          class="arr-1"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+        </svg>
+      </button>
+    </a>
+  );
+};
 
-
-  )
-}
-
-export default Button
+export default Button;

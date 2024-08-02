@@ -16,7 +16,8 @@ const CustomCarousel = ({
   const handlePrev = () => {
     if (divRef.current) {
       const width = divRef.current.offsetWidth;
-      divRef.current.scrollLeft = divRef.current.scrollLeft - 300;
+      divRef.current.scrollLeft =
+        divRef.current.scrollLeft - (width > 600 ? 360 : 270);
       console.log(width, "width");
     }
   };
@@ -24,13 +25,13 @@ const CustomCarousel = ({
     if (divRef.current) {
       const width = divRef.current.offsetWidth;
       divRef.current.scrollLeft =
-        divRef.current.scrollLeft + (width > 600 ? 360 : 300);
+        divRef.current.scrollLeft + (width > 600 ? 360 : 270);
       console.log(width, "width");
     }
   };
   return (
     <div
-      className={`relative overflow-hidden  ${crouselWrapperClassName}`}
+      className={`relative overflow-hidden   ${crouselWrapperClassName}`}
       style={crouselWrapperStyles}
     >
       {isArrowOnTop && (

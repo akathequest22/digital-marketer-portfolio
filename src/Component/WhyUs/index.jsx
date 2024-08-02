@@ -65,7 +65,7 @@ const WhyUS = () => {
         best results for our clients through our innovative strategies and
         expertise.
       </center>
-      <div className="w-full flex  gap-8 mt-10 p-4 overflow-hidden *:after:overflow-hidden *:before:overflow-hidden">
+      <div className="  gap-4 mt-10   ">
         <CustomCarousel>
           {values.map((value, index) => (
             <Card

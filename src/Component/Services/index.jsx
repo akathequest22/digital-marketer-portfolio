@@ -66,7 +66,7 @@ const Services = () => {
             <ServiceCard key={i} {...props} initialColorIndex={i % 5} />
           ))}
         </div>
-        <Button className="mt-8" bnText={" Let’s Collaborate!"} isPri={true} />
+        <Button className="mt-12" bnText={" Let’s Collaborate!"} isPri={true} />
       </div>
     </Container>
   );

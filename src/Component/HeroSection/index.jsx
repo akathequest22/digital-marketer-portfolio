@@ -76,7 +76,7 @@ const HeroSection = () => {
             btnText={"Grow Your Buissness Now"}
             headingClassname="heading"
             descriptionClassName="description"
-            btnClassName="  btn-ani"
+            btnClassName=" btn-ani"
           ></HeadingDesc>
         </div>
 
